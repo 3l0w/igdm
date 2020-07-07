@@ -9,6 +9,20 @@
     transform: scale(1);
   }
 }
+body{
+  background-color:transparent;
+  color: white;
+}
+.form-control {
+  background-color:transparent;
+  border:none;
+  color: white;
+}
+.form-control:focus{
+  background-color: #0000000f;
+  border: none;
+  color: white;
+}
 
 ul {
   padding-left: 0;
@@ -104,7 +118,7 @@ button, button:focus {
 
 .chat-list li {
   list-style: none;
-  border-bottom: 1px #EFEFEF solid;
+  /*border-bottom: 1px #EFEFEF solid;*/
   vertical-align: middle;
   cursor: pointer;
   width: 100%;
@@ -129,8 +143,7 @@ button, button:focus {
 }
 
 .chat-list li:hover, .chat-list li.active {
-  background-color: #DFDFDF;
-  background-image: linear-gradient(to left, #FCFCFC, #e9ecef);
+  background-image: linear-gradient(to left, #00000000, #000000f0);
 }
 
 .chat-list li .username {
@@ -194,11 +207,11 @@ button, button:focus {
 
 .chat-title {
   min-height: 0;
-  border-bottom: 1px #EFEFEF solid;
+ /* border-bottom: 1px #EFEFEF solid;*/
 }
 
 .chat-subtitle {
-  color: #666;
+ /* color: #666;*/
   text-transform: capitalize;
   font-size: 12px;
   margin: 0;
@@ -216,8 +229,8 @@ button, button:focus {
 .messages {
   overflow: auto;
   flex: 1 1;
-  background: #efefef;
-  background-image: linear-gradient(to bottom, #f8f9fa, #e9ecef);
+ /* background: #efefef;*/
+ /* background-image: linear-gradient(to bottom, #00000000, #000000c0);*/
 }
 
 .messages .cover img {
@@ -299,15 +312,15 @@ button, button:focus {
   float: left;
   padding: 0.5rem 0.75rem;
   max-width: 75%;
-  color: #666;
-  background-color: #FCFCFC;
+ /* color: #666;*/
+  /*background-color: #FCFCFC;*/
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
 
 .message.inward .content.ig-media, .message.outward .content.ig-media {
   background: #fff;
-  color: #666;
+ /* color: #666;*/
   max-width: 320px;
   padding: 0;
   overflow: hidden;
@@ -324,7 +337,7 @@ button, button:focus {
 
 
 .message.inward .content .placeholder, .message.outward .content .placeholder {
-  color: #aaa;
+ /* color: #aaa;*/
   font-style: italic;
   padding: 0.5rem 0.75rem;
 }
@@ -364,7 +377,8 @@ button, button:focus {
   outline: none !important;
   box-shadow: none;
   font-size: 1rem;
-  color: #555;
+ /* color: #555;*/
+  color: white;
   padding: 0.75rem;
   width: 100%;
   word-wrap: break-word;
@@ -372,6 +386,7 @@ button, button:focus {
   height: 3rem;
   border: none;
   resize: none;
+  background-color: transparent;
 }
 
 .viewer {
@@ -477,7 +492,7 @@ button, button:focus {
   top: 0;
   display: flex;
   flex-direction: column;
-  border-right: 1px #EFEFEF solid;
+  /*border-right: 1px #EFEFEF solid;*/
 }
 
 .chat {
@@ -492,7 +507,7 @@ button, button:focus {
 .listStrapper {
   flex: 1 1;
   overflow-y: overlay;
-  background-color: #FCFCFC;
+ /* background-color: #FCFCFC;*/
 }
 
 @media (max-width:768px) {
@@ -518,12 +533,13 @@ button, button:focus {
 }
 
 .header {
-  background-image: linear-gradient(to bottom, #f8f9fa, #e9ecef);
-  border-bottom: 1px solid #DFDFDF;
+  /*background-image: linear-gradient(to bottom, #f8f9fa, #e9ecef);*/
+  background-image:transparent;
+/*  border-bottom: 1px solid #DFDFDF;*/
 }
 
 .messageBox {
-  border-top: 1px solid #DADADA;
+ /* border-top: 1px solid #DADADA;*/
   position: relative;
 }
 
@@ -545,6 +561,7 @@ button, button:focus {
 ::-webkit-scrollbar {
   background: whiteSmoke;
   width: 6px;
+  display:none;
 }
 
 ::-webkit-scrollbar-thumb:window-inactive, ::-webkit-scrollbar-thumb {
@@ -594,6 +611,8 @@ EMOJIS
   border: 1px #efefef solid;
   display: flex;
   flex-direction: column;
+  background-color: transparent;
+  backdrop-filter: blur(10px);
 }
 
 .emojis:not(.hide) {
@@ -665,6 +684,7 @@ FILE-UPLOAD
   border: 1px #efefef solid;
   border-radius: 40px;
   text-align: center;
+  background-color: transparent;
 }
 
 .upload.hide{

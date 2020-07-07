@@ -1,3 +1,5 @@
+const glasstron = require('glasstron');
+glasstron.init();
 const electron = require('electron');
 const { app, Menu, BrowserWindow, dialog } = electron;
 const createMenuTemplate = require('./menutemplate');
@@ -29,9 +31,21 @@ function createWindow () {
       height: 800,
       icon: `${__dirname}/../browser/img/icon.png`,
       minWidth: 500,
-      minHeight: 400
+      minHeight: 400,
+      webPreferences:{
+        nodeIntegration:true
+      },
+      transparent:true
+    });
+    glasstron.update(mainWindow, {
+      windows: {blurType: 'acrylic'},
+      //                   ^~~~~~~
+      // Windows 10 1803+; for older versions you might want to use 'blurbehind'
+      macos: {vibrancy: 'fullscreen-ui'},
+      linux: {requestBlur: true} // KWin
     });
   }
+  
   mainWindow.setTitle('IGdm - Instagram Desktop Messenger');
 
   instagram.hasActiveSession().then((result) => {
